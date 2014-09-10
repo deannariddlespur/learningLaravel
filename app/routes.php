@@ -36,11 +36,20 @@ $rules = array(
 $validator = Validator::make($data, $rules);
 
 if($validator->fails()) {
-		return Redirect::to('contact')->withErrors($validator)->withInput();
+	    return Redirect::to('contact')->withErrors($validator)->withInput();
 }
 
+$emailcontent = array (
+		'subject' => $data['subject'],
+		'emailmessage' => $data['message']
+);
+
+Mail::send('emails.contactemail', $emailcontent, function($message)
+{
+		$message->to('webdevdea@gmail.com', 'Deanna')
+		->subject('Contact via our contact form');
+});
 		return 'Your message has been sent';
 });
-
 
 
