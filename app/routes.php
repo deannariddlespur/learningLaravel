@@ -20,6 +20,10 @@ Route::get('/about', function()
 {
 	return View::make('about');
 });
+Route::get('/contact', function()
+{
+	return View::make('contact');
+});
 
 
 Route::post('contact', function()
@@ -29,7 +33,6 @@ $rules = array(
 		'subject' => 'required',
 		'message' => 'required'
 );
-
 $validator = Validator::make($data, $rules);
 
 if($validator->fails()) {
