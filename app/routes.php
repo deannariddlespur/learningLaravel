@@ -15,6 +15,15 @@ Route::get('/', function()
 {
 	return View::make('home');
 });
+Route::get('/', function())
+{
+	Schema::create('tasks', function($table)
+	{
+		$table->increments('id');
+		
+	});
+});
+
 
 Route::get('/about', function()
 {
