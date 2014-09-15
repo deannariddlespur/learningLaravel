@@ -1,5 +1,137 @@
-
-body{
-		font-size: 25px;
-		background: #FF99CC;
+body {
+	font-size: 14px;
+	background: #F2F4F5;
 }
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header .background {
+  background-image: url("../img/bg.jpg");
+  height: 400px;
+  z-index: -1;
+}
+
+h1, .h1 {
+    font-size: 31px;
+}
+
+.header-text {
+	color: #ffffff;
+}
+
+.navbar {
+	border-radius: 0;
+
+	position: fixed;
+	width: 100%;
+	padding: 0 20px;
+	z-index: 100;
+}
+
+.jumbotron {
+	padding:0 !important;
+	margin:0;
+	color: #777777;
+	background: #F2F4F5;
+}
+
+.jumbotron h1 {
+	color: #fa5950;
+	font-size: 27px;
+}
+
+.section-padding {
+	padding-top: 150px;
+}
+
+.grey {
+	color:#777777;
+}
+
+.showcase-box {
+	height: 200px;
+	padding: 2px;
+}
+
+.showcase-item {
+	color: #777777;
+	padding: 40px;
+	height: 100%;
+	width: 100%;
+}
+
+.bottom-menu {
+  background: #e2e2e2;
+  color: #bcc3ca;
+  padding: 39px 0 42px;
+  margin: 150px 0 0 0;
+}
+.bottom-menu .navbar-brand {
+  font-size: 20px;
+  padding: 0;
+}
+.bottom-menu .title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 0;
+}
+.bottom-menu a {
+  color: inherit;
+}
+.active .bottom-menu a,
+.bottom-menu a:hover,
+.bottom-menu a:focus {
+  color: #e47054;
+  text-decoration: none;
+}
+
+.bottom-menu .bottom-links {
+  font-size: 14px;
+  line-height: 1.286;
+}
+
+.bottom-links{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bottom-links li {
+  display: block;
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+@media (max-width: 767px) {
+	.jumbotron h1 {
+		font-size:22px;
+	}
+	.header-text {
+	color: #fa5950;
+	}
+
+  .bottom-menu .navbar-brand,
+  .bottom-menu .bottom-links {
+    margin-bottom: 10px;
+  }
+  .bottom-menu .navbar-brand {
+    padding: 15px;
+    float: none;
+  }
+  .bottom-menu .bottom-links li {
+    float: none;
+    margin-bottom: 2px;
+  }
+}
+
+
