@@ -12,46 +12,8 @@ Testing 123
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home');
-});
-Route::get('/', function())
-{
-	Schema::create('tasks', function($table)
-	{
-		$table->increments('id');
-		
-	});
-});
-
-
-Route::get('/about', function()
-{
-	return View::make('about');
-});
-Route::get('/contact', function()
-{
-	return View::make('contact');
-});
-
-
-Route::post('contact', function()
-{
-$data = Input::all();
-$rules = array(
-		'subject' => 'required',
-		'message' => 'required'
-);
-
-$validator = Validator::make($data, $rules);
-
-if($validator->fails()) {
-	    return Redirect::to('contact')->withErrors($validator)->withInput();
-}
-
-
-		return 'Your message has been sent';
-});
-
+Route::get('/','TasksController@home');
+Route::get('/create','TasksController@create');
+Route::get('/edit','TasksController@edit');
+Route::get('/delete','TasksController@delete');
 
