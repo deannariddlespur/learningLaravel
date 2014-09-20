@@ -46,7 +46,7 @@
   		 				        <td>{{ ($task->body }} </td>
   		 				        <td>{{ ($task->done ? 'Yes' : 'No' }} </td>
   			 					</tr>
-  			 					@endforeach
+  			 			@endforeach
   			   </tbody>
   			  </table>
   			  @endif
