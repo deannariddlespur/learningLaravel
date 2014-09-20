@@ -10,6 +10,7 @@ class TasksController extends BaseController
 	     }
 	     
 	     public function create()
+	     {
 	     		return View::make('create');
 	     }
 	     
