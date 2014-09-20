@@ -28,7 +28,7 @@
   		
   		@if ($tasks->isEmpty())
   		        <p> Currently, there is no task! </p>
-  		        @else
+  		@else
   		  <table class="table">
   		  <thead>
   		  	<tr>
@@ -38,13 +38,13 @@
   		  	<th>Finish</th>
   		  </tr>
   		 </thead>
-  		 		<tbody>
+  		 	<tbody>
   		 				@foreach($tasks as $task)
   		 				        <tr>
-  		 				        <td>{{ ($task->id }} </td>
-  		 				        <td>{{ ($task->title }} </td>
-  		 				        <td>{{ ($task->body }} </td>
-  		 				        <td>{{ ($task->done ? 'Yes' : 'No' }} </td>
+  		 				        <td>{{ $task->id }} </td>
+  		 				        <td>{{ $task->title }} </td>
+  		 				        <td>{{ $task->body }} </td>
+  		 				        <td>{{ $task->done ? 'Yes' : 'No' }} </td>
   			 					</tr>
   			 			@endforeach
   			   </tbody>
