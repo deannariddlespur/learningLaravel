@@ -22,5 +22,15 @@ class TasksController extends BaseController
 	     {
 	     		return View::make('delete');
 	     }
-	     
+	     public function saveCreate()
+	     {
+	     		$input = Input::all();
+	     		
+	     		$task = new Task;
+	     		$task->title = $input['title'];
+	     		$task->body = $input['body'];
+	     		$task->save();
+	     		
+	     		return Redirect::action('TasksController@home');
+	     	}
 }
