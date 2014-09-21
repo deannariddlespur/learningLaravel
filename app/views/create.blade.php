@@ -1,5 +1,3 @@
-<?php
-// app/view/create.blade.php
 @extends('layout')
 @section('content')
 			<section class="header section-padding">
@@ -18,7 +16,7 @@
 					<div class="jumbotron text-center">
 					<h1>Create A Task</h1>
 					
-					{{ Form::open([url'=>'/create']) }}
+					{{ Form::open(['url'=>'/create']) }}
 					</div>
 					
 					{{ Form::label('title', 'Title:') }}
