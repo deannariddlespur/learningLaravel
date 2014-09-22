@@ -11,11 +11,15 @@
 Testing 123
 |
 */
-
+Route::model('task', 'Task');
 Route::get('/','TasksController@home');
 Route::get('/create','TasksController@create');
-Route::get('/edit','TasksController@edit');
-Route::get('/delete','TasksController@delete');
+Route::get('/edit/{task}','TasksController@edit');
+Route::post('/edit', 'TasksController@doEdit');
+Route::get('/delete/{task}','TasksController@delete');
+Route::post('/delete', 'TasksController@doDelete');
 // listen for when we POST to the create page and then call saveCreate action in the TasksController to handle the form.
 Route::post('/create', 'TasksController@saveCreate');
+Route::get('task/{id}', 'TasksController@show')->where('id', '\d+');
+
 

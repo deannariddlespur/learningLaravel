@@ -2,6 +2,9 @@ body {
 	font-size: 14px;
 	background: #F2F4F5;
 }
+.text-center{
+	text-align:left;
+}
 
 .background {
   position: absolute;

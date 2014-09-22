@@ -28,6 +28,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a href="/">Home</a></li>
       <li><a href="{{ action('TasksController@create') }}">Create</a></li>
+         <li><a href="{{ action('TasksController@edit') }}">Edit</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
   </div><!-- /.navbar-collapse -->
