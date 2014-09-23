@@ -42,7 +42,8 @@
   		 				@foreach($tasks as $task)
   		 				        <tr>
   		 				        <td>{{ $task->id }} </td>
-  		 				        <td><a href"{{ action('TasksController@show', $task->id) }}">
+  		 				        <td>
+  		 				        	<a href ="{{ action('TasksController@show', $task->id) }}">
   		 				        	{{ $task->title }} </a>
   		 				        	
   		 				        	</td>

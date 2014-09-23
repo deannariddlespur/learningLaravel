@@ -24,7 +24,7 @@
 					<thead>
 						<tr>
 							<th>#</th>
-							<th>Title></th>
+							<th>Title</th>
 							<th>Body</th>
 							<th>Finish</th>
 							<th>Control</th>
