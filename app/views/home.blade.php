@@ -26,8 +26,8 @@
   		</div>
   		
   		
-  		@if ($tasks->isEmpty())
-  		        <p> Currently, there is no task! </p>
+  		@if ($ClientSites->isEmpty())
+  		        <p> Currently, there is no ClientSites! </p>
   		@else
   		  <table class="table">
   		  <thead>
@@ -39,21 +39,21 @@
   		  </tr>
   		 </thead>
   		 	<tbody>
-  		 				@foreach($tasks as $task)
+  		 				@foreach($ClientSites as $ClientSites)
   		 				        <tr>
-  		 				        <td>{{ $task->id }} </td>
+  		 				        <td>{{ $ClientSites->clientID }} </td>
   		 				        <td>
-  		 				        	<a href ="{{ action('TasksController@show', $task->id) }}">
-  		 				        	{{ $task->title }} </a>
+  		 				        	<a href ="{{ action('ClientSitesController@show', $ClientSites->clientID) }}">
+  		 				        	{{ $ClientSites->siteName }} </a>
   		 				        	
   		 				        	</td>
-  		 				        <td>{{ $task->body }} </td>
-  		 				        <td>{{ $task->done ? 'Yes' : 'No' }} </td>
+  		 				        <td>{{ $ClientSites->description }} </td>
+  		 				        <td>{{ $ClientSites->launchDate }} </td>
   		 				        <td>
-  		 				        	<a href="{{ action('TasksController@edit',$task->id) }}"
+  		 				        	<a href="{{ action('ClientSitesController@edit',$ClientSites->clientID) }}"
   		 				        		class="btn btn-info">Edit</a>
   		 				        		
-  		 				        		<a href="{{ action('TasksController@delete',$task->id) }}"
+  		 				        		<a href="{{ action('ClientSitesController@delete',$ClientSites->clientID) }}"
   		 				        		class="btn btn-info">Delete</a>
   		 				        		
   		 				        </td>

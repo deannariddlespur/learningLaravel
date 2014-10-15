@@ -6,7 +6,7 @@
 						<div class="header-text">
 								<h1>Create</h1>
 								<p>
-								Create Tasks Page
+								Create ClientSitess Page
 								</p>
 						</div>
 					</div>
@@ -14,20 +14,24 @@
 			<div class="container">
 				<section class="section-padding">
 					<div class="jumbotron text-center">
-					<h1>Create A Task</h1>
+					<h1>Create A ClientSites</h1>
 					
 					{{ Form::open(['url'=> '/create', 'class' => 'form']) }}
 					</div>
 					
-					{{ Form::label('title', 'Title:') }}
-					{{ Form::text('title', null,['class'=>'form-control']) }}
+					{{ Form::label('siteName', 'siteName:') }}
+					{{ Form::text('siteName', null,['class'=>'form-control']) }}
 				</div>
 				<div class="form-group">
-					{{ Form::label('body', 'Body:') }}
-					{{ Form::textarea('body', null,['class'=>'form-control']) }}
+					{{ Form::label('description', 'description:') }}
+					{{ Form::textarea('description', null,['class'=>'form-control']) }}
 				</div>
 				<div class="form-group">
-					{{ Form::submit('Create Task', ['class'=>'btn btn-primary']) }}
+					{{ Form::label('launchDate', 'launchDate:') }}
+					{{ Form::text('launchDate', null,['class'=>'form-control']) }}
+				</div>
+				<div class="form-group">
+					{{ Form::submit('Create ClientSites', ['class'=>'btn btn-primary']) }}
 				</div>
 				{{ Form::close() }}
 					</div>

@@ -6,7 +6,7 @@
 						<div class="header-text">
 								<h1>Learning Laravel: the easiest Way</h1>
 								<p>
-								Showing a single task<br /> using route parameter
+								Showing a single ClientSites<br /> using route parameter
 								</p>
 						</div>
 					</div>
@@ -17,31 +17,31 @@
 						
 					<div class="panel panel-default"
 				<div class="panel-heading">
-					<h1><span class="grey"> Task</span> {{ $task->id }}
+					<h1><span class="grey"> ClientSites</span> {{ $ClientSites->clientID }}
 					</h1>
 				</div>
 				<table class="table">
 					<thead>
 						<tr>
 							<th>#</th>
-							<th>Title</th>
-							<th>Body</th>
-							<th>Finish</th>
+							<th>SiteName</th>
+							<th>Description</th>
+							<th>LaunchDate</th>
 							<th>Control</th>
 						</tr>
 					</thead>
 					<tbody>
 						
 						<tr>
-							<td>{{ $task->id}}</td>
-							<td>{{ $task->title}}</td>
-								<td>{{ $task->body}}</td>
-									<td>{{ $task->done ? 'Yes' : 'No'}}</td>
+							<td>{{ $ClientSites->clientID}}</td>
+							<td>{{ $ClientSites->siteName}}</td>
+								<td>{{ $ClientSites->description}}</td>
+									<td>{{ $ClientSites->launchDate}}</td>
 									<td>
-										<a href="{{ action('TasksController@edit',
-										 $task->id) }}" class="btn">Edit</a>
-										 <a href="{{ action('TasksController@delete',
-										 $task->id) }}" class="btn">Delete</a>
+										<a href="{{ action('ClientSitesController@edit',
+										 $ClientSites->clientID) }}" class="btn">Edit</a>
+										 <a href="{{ action('ClientSitesController@delete',
+										 $ClientSites->clientID) }}" class="btn">Delete</a>
 										 
 									</td>
 						</tr>

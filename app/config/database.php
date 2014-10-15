@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'todo',
+			'database'  => 'dynamix_db',
 			'username'  => 'root',
 			'password'  => 'root',
 			'charset'   => 'utf8',

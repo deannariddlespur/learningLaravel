@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="header-text">
 			<h1>Delete</h1>
-			<p>Delete tasks page
+			<p>Delete ClientSitess page
 				</p>
 				
 		</div>
@@ -14,14 +14,14 @@
 <div class="container">
 	<section class="section-padding">
 		<div class="jumbotron text-center">
-			<h1>Do you want to delete Task {{ $task->id }}? </h1>
+			<h1>Do you want to delete ClientSites {{ $clientsite->clientID }}? </h1>
 			
 			{{ Form::open(['url'=> '/delete', 'class'=>'form']) }}
-			{{ Form::hidden('id', $task->id) }}
+			{{ Form::hidden('clientID', $clientsite->clientID) }}
 			
 					<div class="form=group">
-				{{ Form::submit('Delete Task', ['class' => 'btn btn-primary']) }}
-				<a href="{{ action('TasksController@home') }}"
+				{{ Form::submit('Delete ClientSites', ['class' => 'btn btn-primary']) }}
+				<a href="{{ action('ClientSitesController@home') }}"
 				class="btn btn-danger"> No</a>
 			</div>
 			{{ Form::close() }}
