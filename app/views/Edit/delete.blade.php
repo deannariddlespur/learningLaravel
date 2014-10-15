@@ -21,7 +21,7 @@
 			
 					<div class="form=group">
 				{{ Form::submit('Delete ClientSites', ['class' => 'btn btn-primary']) }}
-				<a href="{{ action('ClientSitesController@home') }}"
+				<a href="{{ action('PagesController@home') }}"
 				class="btn btn-danger"> No</a>
 			</div>
 			{{ Form::close() }}

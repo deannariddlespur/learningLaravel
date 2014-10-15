@@ -6,13 +6,13 @@ class ClientSitesController extends BaseController
 	     
 	     public function create()
 	     {
-	     		return View::make('create');
+	     		return View::make('edit.create');
 	     }
 	     
 	     public function edit( ClientSite $clientsite )
 		
 	     {
-	     		return View::make('edit', compact('clientsite'));
+	     		return View::make('edit.edit', compact('clientsite'));
 	     }
 		 public function doEdit()
 		 {
@@ -26,7 +26,7 @@ class ClientSitesController extends BaseController
 		 }
 	     public function delete(Clientsite $clientsite)
 	     {
-	     		return View::make('delete', compact('clientsite'));
+	     		return View::make('edit.delete', compact('clientsite'));
 	     }
 		 public function doDelete()
 		 {
