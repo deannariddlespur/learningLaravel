@@ -16,8 +16,11 @@
 						<td>{{$client->launchDate}}</td>
 						<td>{{$client->description}}</td>
 							<td>	
-										 <a href="{{ action('ClientSitesController@edit',$clientsite->clientID) }}"
-  		 				        		class="btn btn-info">Edit</a></td>
+										<a href="{{ action('ClientSitesController@edit',$client->clientID) }}"
+  		 				        		class="btn btn-info">Edit</a>
+  		 				        		
+  		 				        		<a href="{{ action('ClientSitesController@delete',$client->clientID) }}"
+  		 				        		class="btn btn-info">Delete</a</td>
 					</tr>
 				@endforeach
 		   </table>

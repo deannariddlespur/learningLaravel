@@ -6,4 +6,5 @@ class ClientSite extends Eloquent
 protected $table = 'ClientSites';
 protected $primaryKey = 'clientID';
 
+
 }

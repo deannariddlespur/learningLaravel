@@ -22,7 +22,8 @@ Route::post('ClientFeatureUpdate', 'PagesController@ClientFeatureUpdate');
 Route::get('/create','PagesController@create');
 Route::post('/create', 'PagesController@saveCreate');
 
-
+Route::model('clientsite', 'ClientSite');
+Route::get('/','PagesController@home');
 Route::get('/create','ClientSitesController@create');
 Route::get('/edit/{clientsite}','ClientSitesController@edit');
 Route::post('/edit', 'ClientSitesController@doEdit');

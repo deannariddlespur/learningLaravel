@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.default')
 @section('content')
 <section class="header section-padding">
 	<div class="background">$nbsp;</div>

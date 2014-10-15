@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.default')
 @section('content')
 
 		<section class="header section-padding">
@@ -20,8 +20,8 @@
   		<div class="jumbotron text-center">
   		    <div class="panel panel-default">
   		<div class="panel-heading">
-  		<h1>
   				<span class="grey">Our</span> To-do List
+  		<h1>
   		</h1>
   		</div>
   		

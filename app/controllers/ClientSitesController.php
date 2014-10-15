@@ -9,7 +9,7 @@ class ClientSitesController extends BaseController
 	     		return View::make('create');
 	     }
 	     
-	     public function edit( Clientsite $clientsite )
+	     public function edit( ClientSite $clientsite )
 		
 	     {
 	     		return View::make('edit', compact('clientsite'));
@@ -22,7 +22,7 @@ class ClientSitesController extends BaseController
 			$clientsite->launchDate = Input::get('launchDate');
 			$clientsite->save();
 			
-			return Redirect::action('ClientSitesController@home');
+			return Redirect::action('PagesController@home');
 		 }
 	     public function delete(Clientsite $clientsite)
 	     {
@@ -32,7 +32,7 @@ class ClientSitesController extends BaseController
 		 {
 		 	$clientsite = Clientsite::findOrFail(Input::get('clientID'));
 			$clientsite->delete();
-			return Redirect::action('ClientSitesController@home');
+			return Redirect::action('PagesController@home');
 		 }
 	     public function saveCreate()
 	     {
@@ -44,7 +44,7 @@ class ClientSitesController extends BaseController
 	     		$clientsite->launchDate = $input['launchDate'];
 	     		$clientsite->save();
 	     		
-	     		return Redirect::action('ClientSitesController@home');
+	     		return Redirect::action('PagesController@home');
 	     	}
 		 public function show($clientID)
 		 {
