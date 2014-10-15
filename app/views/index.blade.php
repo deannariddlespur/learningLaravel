@@ -15,8 +15,9 @@
 						<td>{{link_to("/ClientProfile/$client->siteName",$client->siteName)}}</td>
 						<td>{{$client->launchDate}}</td>
 						<td>{{$client->description}}</td>
-							<td>	<a href="{{ action('ClientSitesController@edit',
-										 $client->client) }}" class="btn">Edit</a></td>
+							<td>	
+										 <a href="{{ action('ClientSitesController@edit',$clientsite->clientID) }}"
+  		 				        		class="btn btn-info">Edit</a></td>
 					</tr>
 				@endforeach
 		   </table>

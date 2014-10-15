@@ -23,7 +23,6 @@ Route::get('/create','PagesController@create');
 Route::post('/create', 'PagesController@saveCreate');
 
 
-
 Route::get('/create','ClientSitesController@create');
 Route::get('/edit/{clientsite}','ClientSitesController@edit');
 Route::post('/edit', 'ClientSitesController@doEdit');
